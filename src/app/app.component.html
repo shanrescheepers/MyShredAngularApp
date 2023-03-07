@@ -1,12 +1,15 @@
-<nav>
-  <ul>
-    <li>
+<!-- loop through listOfData and return this component each time -->
 
+<!-- <nav> -->
+<div class="app">
+  <app-landing *ngFor="let emoji of listOfData; let i=index" [emojiObject]="emoji"></app-landing>
+  <!-- <ul>
+    <li> -->
+  <!-- <a routerLink="landing" routerLinkActive="active" ariaCurrentWhenActive="page">First Comp</a> -->
+  <!-- <app-components></app-components> -->
+  <!-- app-landing is being imported due to its selecor -->
+  <!-- </li>
+  </ul> -->
+</div>
 
-      <app-landing></app-landing>
-      <a routerLink="landing" routerLinkActive="active" ariaCurrentWhenActive="page">First Comp</a>
-      <!-- <app-components></app-components> -->
-      <!-- app-landing is being imported due to its selecor -->
-    </li>
-  </ul>
-</nav>
+<!-- </nav> -->

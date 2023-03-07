@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 // Can Import API Services underneath too.
 
 
@@ -9,4 +9,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'MyShredAngularApp';
+  listOfData = [{ value: "🤓" }, { value: "😎" }, { value: "🤩" }]
+
 }

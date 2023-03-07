@@ -1,1 +1,18 @@
-<p>landing works!</p>
+<!-- interpolation of variable in our html -->
+<h1>{{helloMessage}}</h1>
+
+<!--  -->
+<h3 [ngClass]="isFirstTime ? 'firstTime' : 'notFirstTime'">First Time Visitor</h3>
+
+<!-- this value is received from the parent (app component) -->
+<h2>{{ emojiObject.value }}</h2>
+<ng-template [*ngIf]="loggedIn" [*ngIfElse]="loggedOut">
+    <div>
+        <h2>Logged In</h2>
+    </div>
+</ng-template>
+
+<button #loggedOut>Sign Up</button>
+<!-- this is how we define a function -->
+<button (click)=" sayHello()">Hi 😊</button>
+<h3 *ngFor="let emo of listItems; let i=index">{{i}}. {{emo.value}}</h3>
