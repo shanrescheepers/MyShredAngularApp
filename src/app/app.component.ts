@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
+// Can Import API Services underneath too.
 
-@Component({
+
+@Component({ //decorator - defines that this is a component
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
