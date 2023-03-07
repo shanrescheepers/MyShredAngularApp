@@ -4,15 +4,26 @@
 <!--  -->
 <h3 [ngClass]="isFirstTime ? 'firstTime' : 'notFirstTime'">First Time Visitor</h3>
 
-<!-- this value is received from the parent (app component) -->
-<h2>{{ emojiObject.value }}</h2>
+
 <ng-template [*ngIf]="loggedIn" [*ngIfElse]="loggedOut">
+
     <div>
-        <h2>Logged In</h2>
+        <ng-template>Logged In</ng-template>
     </div>
+
 </ng-template>
 
-<button #loggedOut>Sign Up</button>
+<ng-template #loggedOut>
+    <h2>Sign Up</h2>
+</ng-template>
 <!-- this is how we define a function -->
-<button (click)=" sayHello()">Hi 😊</button>
+<div (click)="sayHello()">Hi 😊</div>
+
+<!-- this value is received from the parent (app component) -->
+<h4>{{ emojiObject.value }}</h4>
+
 <h3 *ngFor="let emo of listItems; let i=index">{{i}}. {{emo.value}}</h3>
+<!-- databinding -->
+<img alt="Testing" [src]="imageUrl" />
+<!-- databinding -->
+<button [disabled]="!loggedIn">Log Off</button>

@@ -13,9 +13,10 @@ export class LandingComponent implements OnInit {
 
   sayHello = () => {
     console.log("Helooooo")
+    this.loggedIn = false
   }
 
-  loggedIn = false
+  loggedIn = true
 
   // listItems = ["😃", "🥹", "😇"]
   listItems = [{ value: "😃" }, { value: "🥹" }, { value: "😇" }]
@@ -25,6 +26,7 @@ export class LandingComponent implements OnInit {
   // define the variable we get from the parent in the html
   @Input() emojiObject = { value: '' }
 
+  imageUrl = 'https://photos5.appleinsider.com/gallery/39838-76495-header-l.jpg'
   constructor() { }
 
   ngOnInit(): void {
